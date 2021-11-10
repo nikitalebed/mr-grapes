@@ -13,48 +13,29 @@ class MrGrapesShop extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       home: Scaffold(
+        backgroundColor: Colors.white,
         body: SafeArea(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: ListView(
             children: [
-              Image.asset(
-                'images/logo.png',
+              Container(
+                margin: EdgeInsets.only(left: 15.0, right: 15.0),
                 height: 60.0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Image.asset(
+                      'images/logo.png',
+                    ),
+                    const Icon(
+                      Icons.account_circle,
+                    )
+                  ],
+                ),
               ),
-              const Icon(
-                Icons.account_circle,
-                size: 40.0,
-              )
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          items: const [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.pages),
-              label: 'Главная',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.list),
-              label: 'Магазин',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.local_shipping),
-              label: 'Заказы',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.whatshot),
-              label: 'Акции',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart),
-              label: 'Корзина',
-            ),
-          ],
-          // currentIndex: 0,
-          selectedItemColor: Colors.red[800],
-        ),
+        bottomNavigationBar: HomePage() // Oleksandr
       ),
     );
   }
