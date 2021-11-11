@@ -11,7 +11,7 @@ class MrGrapesShop extends StatelessWidget {
     return MaterialApp(
       title: 'Mr-Grapes',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primaryColor: Color(0xFFFDC7C3),
       ),
       home: HomePage()
     );

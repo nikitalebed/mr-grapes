@@ -15,15 +15,15 @@ class _DestinationViewState extends State<DestinationView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('${widget.destination.title} Text'),
-        // backgroundColor: widget.destination.color,
-      ),
-      // backgroundColor: widget.destination.color[100],
-      body: Container(
-        padding: const EdgeInsets.all(32.0),
-        alignment: Alignment.center,
-        child: Text('${widget.destination.title}'),
+      backgroundColor: Color(0xFFFDC7C3),
+      body: ListView(
+        children: [
+          Container(
+            padding: const EdgeInsets.all(32.0),
+            alignment: Alignment.center,
+            child: Text('${widget.destination.title}'),
+          ),
+        ],
       ),
     );
   }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Destination {
-  const Destination(this.title, this.icon, this.color);
+  const Destination(this.title, this.icon);
 
   final String title;
   final IconData icon;
-  final MaterialColor color;
 }
