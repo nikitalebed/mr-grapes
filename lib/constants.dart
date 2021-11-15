@@ -15,5 +15,5 @@ const List<Destination> allDestinations = <Destination>[
   Destination('Корзина', Icons.shopping_cart_outlined)
 ];
 
-const kPrimaryColor = Color(0xFFFDC7C3);
+const kPrimaryColor = Color(0xFFFFF9F9);
 const kAccentColor = Colors.red;
