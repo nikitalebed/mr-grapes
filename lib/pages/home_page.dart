@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin<HomeP
               title: Text(destination.title),
           );
         }).toList(),
-        selectedItemColor: Colors.red[800],
+        selectedItemColor: kAccentColor,
       ),
     );
   }
