@@ -36,7 +36,17 @@ class _HomePageState extends State<HomePage>
         },
         items: allDestinations.map((BottomBarMenuIcon destination) {
           return BottomNavigationBarItem(
-            icon: Icon(destination.icon),
+            icon: Stack(
+              children: [
+                Icon(destination.icon),
+                // const Positioned(
+                //   top: 0.0,
+                //   right: 0.0,
+                //   child: Icon(Icons.brightness_1, size: 8.0,
+                //       color: Colors.redAccent),
+                // )
+              ],
+            ),
             // backgroundColor: destination.color,
             title: Text(destination.title),
           );
