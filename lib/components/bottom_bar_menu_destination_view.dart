@@ -7,18 +7,20 @@ import 'package:mr_grapes/screens/home_screen.dart';
 import 'package:mr_grapes/screens/order_screen.dart';
 import 'package:mr_grapes/screens/sale_screen.dart';
 
-import 'destination.dart';
+import 'botttom_bar_menu_icon.dart';
 
-class DestinationView extends StatefulWidget {
-  DestinationView(this.destination);
 
-  final Destination destination;
+
+class BottomBarMenuDestinationView extends StatefulWidget {
+  BottomBarMenuDestinationView(this.destination);
+
+  final BottomBarMenuIcon destination;
 
   @override
-  _DestinationViewState createState() => _DestinationViewState();
+  _BottomBarMenuDestinationViewState createState() => _BottomBarMenuDestinationViewState();
 }
 
-class _DestinationViewState extends State<DestinationView> {
+class _BottomBarMenuDestinationViewState extends State<BottomBarMenuDestinationView> {
   Map<String, Widget> destinationScreens = {
     'Главная': HomeScreen(),
     'Каталог': CatalogScreen(),

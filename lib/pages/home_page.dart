@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:mr_grapes/components/botttom_bar_menu_icon.dart';
 
+import '../components/bottom_bar_menu_destination_view.dart';
 import '../constants.dart';
-import '../destination.dart';
-import '../destination_view.dart';
 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> with TickerProviderStateMixin<HomePage> {
+class _HomePageState extends State<HomePage>
+    with TickerProviderStateMixin<HomePage> {
   int _currentIndex = 0;
 
   @override
@@ -19,8 +20,9 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin<HomeP
         top: false,
         child: IndexedStack(
           index: _currentIndex,
-          children: allDestinations.map<Widget>((Destination destination) {
-            return DestinationView(destination);
+          children:
+              allDestinations.map<Widget>((BottomBarMenuIcon destination) {
+            return BottomBarMenuDestinationView(destination);
           }).toList(),
         ),
       ),
@@ -32,11 +34,11 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin<HomeP
             _currentIndex = index;
           });
         },
-        items: allDestinations.map((Destination destination) {
+        items: allDestinations.map((BottomBarMenuIcon destination) {
           return BottomNavigationBarItem(
-              icon: Icon(destination.icon),
-              // backgroundColor: destination.color,
-              title: Text(destination.title),
+            icon: Icon(destination.icon),
+            // backgroundColor: destination.color,
+            title: Text(destination.title),
           );
         }).toList(),
         selectedItemColor: kAccentColor,
