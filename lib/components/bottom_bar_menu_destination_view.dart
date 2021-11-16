@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:mr_grapes/components/top_bar.dart';
 import 'package:mr_grapes/constants.dart';
 import 'package:mr_grapes/screens/cart_screen.dart';
@@ -21,16 +22,18 @@ class BottomBarMenuDestinationView extends StatefulWidget {
 }
 
 class _BottomBarMenuDestinationViewState extends State<BottomBarMenuDestinationView> {
-  Map<String, Widget> destinationScreens = {
-    'Главная': HomeScreen(),
-    'Каталог': CatalogScreen(),
-    'Заказы': OrderScreen(),
-    'Акции': SaleScreen(),
-    'Корзина': CartScreen(),
-  };
+  Map<String, Widget> destinationScreens = {};
 
   @override
   Widget build(BuildContext context) {
+    destinationScreens = {
+      AppLocalizations.of(context)!.main: HomeScreen(),
+      AppLocalizations.of(context)!.catalog: CatalogScreen(),
+      AppLocalizations.of(context)!.orders: OrderScreen(),
+      AppLocalizations.of(context)!.sale: SaleScreen(),
+      AppLocalizations.of(context)!.cart: CartScreen(),
+    };
+
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: ListView(
