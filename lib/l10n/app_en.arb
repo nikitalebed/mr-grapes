@@ -1,0 +1,7 @@
+{
+    "main": "Main",
+    "catalog": "Goods",
+    "orders": "Orders",
+    "sale": "Sale",
+    "cart": "Cart"
+}
