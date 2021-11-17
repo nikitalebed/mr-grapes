@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mr_grapes/models/product.dart';
+import 'package:mr_grapes/screens/details_screen.dart';
 
 import '../../../constants.dart';
 
@@ -12,20 +13,20 @@ class ItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print("clicked");
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => DetailsScreen(product),
+          ),
+        );
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(kDefaultPaddin),
-              // For  demo we use fixed height  and width
-              // Now we dont need them
-              // height: 180,
-              // width: 160,
+              padding: const EdgeInsets.all(kDefaultPaddin / 4),
               decoration: BoxDecoration(
-                color: product.color,
                 borderRadius: BorderRadius.circular(16),
               ),
               child: Hero(

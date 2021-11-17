@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:mr_grapes/models/product.dart';
 
 class ProductService {
@@ -11,7 +10,6 @@ class ProductService {
         size: 12,
         description: "Lorem Ipsum is simply dummy text",
         image: "images/products/img.png",
-        color: Color(0xFF3D82AE),
       ),
       Product(
         id: 2,
@@ -20,7 +18,6 @@ class ProductService {
         size: 8,
         description: "Lorem Ipsum is simply dummy text",
         image: "images/products/mango.png",
-        color: Color(0xFFD3A984),
       ),
       Product(
         id: 3,
@@ -29,7 +26,6 @@ class ProductService {
         size: 10,
         description: "Lorem Ipsum is simply dummy text",
         image: "images/products/nut_butter.png",
-        color: Color(0xFF989493),
       ),
     ];
   }

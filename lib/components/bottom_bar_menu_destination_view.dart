@@ -40,7 +40,7 @@ class _BottomBarMenuDestinationViewState extends State<BottomBarMenuDestinationV
         children: [
           TopBar(),
           Container(
-            padding: const EdgeInsets.all(32.0),
+            // padding: const EdgeInsets.all(32.0),
             alignment: Alignment.center,
             child: destinationScreens['${widget.destination.title}'],
           ),
