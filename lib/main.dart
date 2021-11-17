@@ -25,11 +25,8 @@ class MrGrapesShop extends StatelessWidget {
           Locale('en', ''),
         ],
         theme: ThemeData(
-          primaryColor: kPrimaryColor,
-          backgroundColor: kPrimaryColor,
-          colorScheme: const ColorScheme.light(
-            secondary: kAccentColor
-          )
+          textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
+          visualDensity: VisualDensity.adaptivePlatformDensity,
         ),
         home: HomePage());
   }
