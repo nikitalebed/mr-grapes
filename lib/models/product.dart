@@ -1,7 +1,18 @@
 import 'package:flutter/cupertino.dart';
 
 class Product {
-  // final Image image;
-  // final String title;
-  // final String description;
+  final String image, title, description;
+  final int price, size, id;
+  final Color color;
+
+  Product({
+    required this.id,
+    required this.image,
+    required this.title,
+    required this.price,
+    required this.description,
+    required this.size,
+    required this.color,
+  });
+
 }
