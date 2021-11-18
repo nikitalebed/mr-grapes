@@ -8,9 +8,7 @@ import 'package:mr_grapes/screens/home_screen.dart';
 import 'package:mr_grapes/screens/order_screen.dart';
 import 'package:mr_grapes/screens/sale_screen.dart';
 
-import 'botttom_bar_menu_icon.dart';
-
-
+import 'bottom_bar_menu_icon.dart';
 
 class BottomBarMenuDestinationView extends StatefulWidget {
   BottomBarMenuDestinationView(this.destination);

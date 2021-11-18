@@ -13,10 +13,12 @@ class ItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => DetailsScreen(product),
+        showModalBottomSheet(
+          context: context,
+          isScrollControlled: true,
+          builder: (context) => FractionallySizedBox(
+            heightFactor: 0.96,
+            child: DetailsScreen(product),
           ),
         );
       },
@@ -40,12 +42,12 @@ class ItemCard extends StatelessWidget {
             child: Text(
               // products is out demo list
               product.title,
-              style: TextStyle(color: kTextLightColor),
+              style: const TextStyle(color: kTextLightColor),
             ),
           ),
           Text(
             "\$${product.price}",
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: const TextStyle(fontWeight: FontWeight.bold),
           )
         ],
       ),

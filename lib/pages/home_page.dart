@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mr_grapes/components/botttom_bar_menu_icon.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:mr_grapes/components/bottom_bar_menu_icon.dart';
 
 import '../components/bottom_bar_menu_destination_view.dart';
 import '../constants.dart';
