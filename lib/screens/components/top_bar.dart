@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mr_grapes/pages/profile_page.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 class TopBar extends StatelessWidget {
   @override

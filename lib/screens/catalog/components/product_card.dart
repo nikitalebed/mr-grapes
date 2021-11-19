@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:mr_grapes/components/product_modal_bottom_sheet.dart';
+import 'package:mr_grapes/screens/catalog/components/product_modal_bottom_sheet.dart';
 import 'package:mr_grapes/models/product.dart';
 
-import '../../../constants.dart';
+import '../../../../../constants.dart';
 
-class ItemCard extends StatelessWidget {
+class ProductCard extends StatelessWidget {
   final Product product;
 
-  ItemCard(this.product);
+  ProductCard(this.product);
 
   @override
   Widget build(BuildContext context) {

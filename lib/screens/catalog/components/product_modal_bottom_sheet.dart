@@ -2,17 +2,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_grapes/models/product.dart';
-import 'package:mr_grapes/screens/product_details_screen.dart';
+import 'package:mr_grapes/screens/catalog/product_details/product_details_screen.dart';
 
-import '../constants.dart';
+import '../../../constants.dart';
 
 class ProductModalBottomSheet extends StatelessWidget {
-  const ProductModalBottomSheet({
-    Key? key,
-    required this.product,
-  }) : super(key: key);
-
   final Product product;
+
+  ProductModalBottomSheet({
+    required this.product,
+  });
 
   @override
   Widget build(BuildContext context) {

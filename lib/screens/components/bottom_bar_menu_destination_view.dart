@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mr_grapes/components/top_bar.dart';
 import 'package:mr_grapes/constants.dart';
 import 'package:mr_grapes/screens/cart_screen.dart';
-import 'package:mr_grapes/screens/catalog_screen.dart';
+import 'package:mr_grapes/screens/catalog/catalog_screen.dart';
+import 'package:mr_grapes/screens/components/top_bar.dart';
 import 'package:mr_grapes/screens/home_screen.dart';
 import 'package:mr_grapes/screens/order_screen.dart';
 import 'package:mr_grapes/screens/sale_screen.dart';

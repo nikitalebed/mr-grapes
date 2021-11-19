@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mr_grapes/components/categories.dart';
-import 'package:mr_grapes/components/item_card.dart';
+import 'package:mr_grapes/screens/catalog/components/categories.dart';
+import 'package:mr_grapes/screens/catalog/components/product_card.dart';
 import 'package:mr_grapes/models/product.dart';
 import 'package:mr_grapes/services/product_service.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 class CatalogScreen extends StatelessWidget {
   @override
@@ -26,7 +26,7 @@ class CatalogScreen extends StatelessWidget {
               crossAxisSpacing: kDefaultPaddin,
               childAspectRatio: 0.75,
             ),
-            itemBuilder: (context, index) => ItemCard(
+            itemBuilder: (context, index) => ProductCard(
               products[index],
             ),
           ),
