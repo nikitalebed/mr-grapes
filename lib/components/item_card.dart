@@ -18,7 +18,29 @@ class ItemCard extends StatelessWidget {
           isScrollControlled: true,
           builder: (context) => FractionallySizedBox(
             heightFactor: 0.96,
-            child: DetailsScreen(product),
+
+            child: Container(
+              color: Color(0xff757575),
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: kPrimaryColor,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25.0),
+                    topRight: Radius.circular(25.0),
+                  ),
+                ),
+
+                child: Column(
+                  children: [
+                    const Icon(
+                      Icons.arrow_drop_up_outlined,
+                      size: 50.0,
+                    ),
+                    DetailsScreen(product),
+                  ],
+                ),
+              ),
+            ),
           ),
         );
       },
