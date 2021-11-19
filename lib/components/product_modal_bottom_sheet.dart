@@ -47,21 +47,32 @@ class ProductModalBottomSheet extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    const Icon(Icons.arrow_back_ios),
-                    Container(
-                      // TODO hardcoded width/height is not good.. need to refactor
-                      width: 220.0,
-                      height: 50.0,
-                      decoration: const BoxDecoration(
-                        color: kAccentColor,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(25.0),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: const Icon(Icons.arrow_back_ios),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        print('Add to the shopping cart: $product');
+                      },
+
+                      child: Container(
+                        // TODO hardcoded width/height is not good.. need to refactor
+                        width: 220.0,
+                        height: 50.0,
+                        decoration: const BoxDecoration(
+                          color: kAccentColor,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(25.0),
+                          ),
                         ),
-                      ),
-                      child: const Center(
-                        child: Text('Add to Shopping Cart', style: TextStyle(
-                          color: kPrimaryColor
-                        ),),
+                        child: const Center(
+                          child: Text('Add to Shopping Cart', style: TextStyle(
+                            color: kPrimaryColor
+                          ),),
+                        ),
                       ),
                     ),
                     const Icon(Icons.shopping_cart_outlined)
