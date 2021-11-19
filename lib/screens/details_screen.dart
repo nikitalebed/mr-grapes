@@ -41,12 +41,9 @@ class DetailsScreen extends StatelessWidget {
                 ),
                 const SizedBox(width: kDefaultPaddin),
                 Expanded(
-                  child: Hero(
-                    tag: "${product.id}",
-                    child: Image.asset(
-                      product.image,
-                      fit: BoxFit.fill,
-                    ),
+                  child: Image.asset(
+                    product.image,
+                    fit: BoxFit.fill,
                   ),
                 )
               ],

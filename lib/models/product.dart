@@ -1,6 +1,6 @@
 class Product {
   final String image, title, description;
-  final int price, size, id;
+  final int price, id;
 
   Product({
     required this.id,
@@ -8,7 +8,6 @@ class Product {
     required this.title,
     required this.price,
     required this.description,
-    required this.size,
   });
 
 }
