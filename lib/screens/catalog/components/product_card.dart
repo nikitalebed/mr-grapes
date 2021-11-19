@@ -24,7 +24,7 @@ class ProductCard extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Container(
-              padding: const EdgeInsets.all(kDefaultPaddin / 4),
+              padding: const EdgeInsets.all(kDefaultPadding / 4),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
               ),
@@ -32,7 +32,7 @@ class ProductCard extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: kDefaultPaddin / 4),
+            padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 4),
             child: Text(
               product.title,
               style: const TextStyle(color: kTextLightColor),

@@ -15,11 +15,19 @@ class ProductGeneralInformation extends StatelessWidget {
     return RichText(
       text: TextSpan(
         children: [
-          const TextSpan(text: 'Price\n'),
+          TextSpan(
+            text: 'Price\n',
+            style: Theme.of(context)
+                .textTheme
+                .headline4!
+                .copyWith(color: kTextColor, fontWeight: FontWeight.bold),
+          ),
           TextSpan(
             text: '\$${product.price}',
-            style: Theme.of(context).textTheme.headline4!.copyWith(
-                color: kAccentColor, fontWeight: FontWeight.bold),
+            style: Theme.of(context)
+                .textTheme
+                .headline4!
+                .copyWith(color: kTextColor, fontWeight: FontWeight.bold),
           ),
         ],
       ),

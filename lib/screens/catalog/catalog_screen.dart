@@ -16,14 +16,14 @@ class CatalogScreen extends StatelessWidget {
       children: <Widget>[
         Categories(),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
+          padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
           child: GridView.builder(
             itemCount: products.length,
             shrinkWrap: true,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              mainAxisSpacing: kDefaultPaddin,
-              crossAxisSpacing: kDefaultPaddin,
+              mainAxisSpacing: kDefaultPadding,
+              crossAxisSpacing: kDefaultPadding,
               childAspectRatio: 0.75,
             ),
             itemBuilder: (context, index) => ProductCard(
