@@ -16,17 +16,10 @@ class ProductGeneralInformation extends StatelessWidget {
       text: TextSpan(
         children: [
           TextSpan(
-            text: 'Price\n',
-            style: Theme.of(context)
-                .textTheme
-                .headline4!
-                .copyWith(color: kTextColor, fontWeight: FontWeight.bold),
-          ),
-          TextSpan(
             text: '\$${product.price}',
             style: Theme.of(context)
                 .textTheme
-                .headline4!
+                .headline6!
                 .copyWith(color: kTextColor, fontWeight: FontWeight.bold),
           ),
         ],
