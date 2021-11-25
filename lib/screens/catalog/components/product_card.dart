@@ -35,7 +35,7 @@ class ProductCard extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: kDefaultPadding / 4),
             child: Text(
               product.title,
-              style: const TextStyle(color: kTextLightColor),
+              style: const TextStyle(color: kTextSelectedColor),
             ),
           ),
           Text(

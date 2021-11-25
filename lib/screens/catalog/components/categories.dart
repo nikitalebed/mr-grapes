@@ -42,14 +42,14 @@ class _CategoriesState extends State<Categories> {
               _categories[index],
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: selectedIndex == index ? kTextColor : kTextLightColor,
+                color: selectedIndex == index ? kTextSelectedColor : kTextColor,
               ),
             ),
             Container(
               margin: const EdgeInsets.only(top: kDefaultPadding / 4), //top padding 5
               height: 2,
               width: 30,
-              color: selectedIndex == index ? Colors.black : Colors.transparent,
+              color: selectedIndex == index ? kAccentColor : Colors.transparent,
             )
           ],
         ),
