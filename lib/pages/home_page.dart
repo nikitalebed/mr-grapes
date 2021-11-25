@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:mr_grapes/services/change_notifiers/bottom_bar_index_tracker.dart';
 import 'package:mr_grapes/screens/components/bottom_bar_menu_destination_view.dart';
 import 'package:mr_grapes/screens/components/bottom_bar_menu_icon.dart';
+import 'package:mr_grapes/services/change_notifiers/bottom_bar_index_tracker.dart';
+import 'package:mr_grapes/services/change_notifiers/cart_change_tracker.dart';
 import 'package:provider/provider.dart';
 
 import '../constants.dart';
 
 class HomePage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     List<BottomBarMenuIcon> allDestinations = <BottomBarMenuIcon>[
@@ -41,25 +41,47 @@ class HomePage extends StatelessWidget {
           onTap: (int index) {
             indexTracker.setIndex(index);
           },
-          items: allDestinations.map((BottomBarMenuIcon destination) {
-            return BottomNavigationBarItem(
+          items: [
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.home),
+              title: Text(AppLocalizations.of(context)!.main),
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.list),
+              title: Text(AppLocalizations.of(context)!.catalog),
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.local_shipping),
+              title: Text(AppLocalizations.of(context)!.orders),
+            ),
+            BottomNavigationBarItem(
+              icon: const Icon(Icons.local_fire_department_outlined),
+              title: Text(AppLocalizations.of(context)!.sale),
+            ),
+            BottomNavigationBarItem(
               icon: Stack(
                 children: [
-                  Icon(destination.icon),
-                  // const Positioned(
-                  //   top: 0.0,
-                  //   right: 0.0,
-                  //   child: Icon(Icons.brightness_1, size: 8.0,
-                  //       color: Colors.redAccent),
-                  // )
+                  const Icon(Icons.shopping_cart_outlined),
+                  buildCardAddedProductMarker(context)
                 ],
               ),
-              // backgroundColor: destination.color,
-              title: Text(destination.title),
-            );
-          }).toList(),
+              title: Text(AppLocalizations.of(context)!.cart),
+            ),
+          ],
           selectedItemColor: kAccentColor,
         ),
+      );
+    });
+  }
+
+  Widget buildCardAddedProductMarker(BuildContext context) {
+    return Consumer<CartChangeTracker>(builder: (context, cartTracker, child) {
+      return Positioned(
+        top: 0.0,
+        right: 0.0,
+        child: Icon(Icons.brightness_1,
+            size: 8.0,
+            color: cartTracker.isEmpty ? Colors.transparent : Colors.redAccent),
       );
     });
   }

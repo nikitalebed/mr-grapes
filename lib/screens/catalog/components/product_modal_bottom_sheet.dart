@@ -1,8 +1,9 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mr_grapes/models/product.dart';
 import 'package:mr_grapes/screens/catalog/product_details/product_details_screen.dart';
+import 'package:mr_grapes/services/change_notifiers/cart_change_tracker.dart';
+import 'package:provider/provider.dart';
 
 import '../../../constants.dart';
 
@@ -54,9 +55,8 @@ class ProductModalBottomSheet extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        print('Add to the shopping cart: $product');
+                        context.read<CartChangeTracker>().addProduct(product);
                       },
-
                       child: Container(
                         // TODO hardcoded width/height is not good.. need to refactor
                         width: 220.0,
